@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=recets-app
+Exec=webapp-container --app-id="recetsapp.lirrumscode" $@ www/index.html
+Icon=assets/logo.svg
+Terminal=false
+Type=Application
+X-Ubuntu-Touch=true

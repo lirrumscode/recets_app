@@ -1,0 +1,15 @@
+{
+    "name": "recetsapp.lirrumscode",
+    "description": "food recets",
+    "architecture": "@CLICK_ARCH@",
+    "title": "recets-app",
+    "hooks": {
+        "recetsapp": {
+            "apparmor": "recetsapp.apparmor",
+            "desktop":  "recetsapp.desktop"
+        }
+    },
+    "version": "1.0.0",
+    "maintainer": "lirrumscode <lirrumscode@gmail.com>",
+    "framework" : "@CLICK_FRAMEWORK@"
+}
