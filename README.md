@@ -33,7 +33,7 @@ ionic serve --external
 
 
 ## Deploy 💻 
-The deploy is for the Operative System: Ubuntu Touch and the platform <a href=https://open-store.io/"" target="_BLANK">Open Store</a>
+The deploy is for the Operative System: Ubuntu Touch and the platform <a href="https://open-store.io/" target="_BLANK">Open Store</a>
 
 ## Authors ✒️
 
