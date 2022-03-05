@@ -1,0 +1,105 @@
+<ion-header class="ion-no-border" translucent="true">
+  <ion-toolbar color="light">
+    <ion-row>
+      <ion-col size="3"><ion-menu-button></ion-menu-button></ion-col>
+      <ion-col size="9">
+        <div class="rectangule">
+          <img src="assets/images/user1.png" alt="img">
+        </div>
+        </ion-col>
+    </ion-row>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="light">
+  <div class="ion-padding">
+    <ion-grid>
+      <ion-row>
+       <ion-col size="12">
+         <section class="sec-inf">
+           <h3 class="title">Welcome to <span>RecetsApp!</span> 🤝</h3>
+           <p class="text">How you doin?</p> 
+         </section>
+
+         <section class="sec-random">
+          <ion-row>
+            <ion-col size="8">
+              <h4 class="text-one"> Random recipies</h4>
+            </ion-col>
+            <ion-col size="4" (click)="goSeeMore()">
+              <h4 class="text-two"> See more</h4>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col size="12">
+              <ion-slides pager="false" [options]="slideOpts">
+                <ion-slide *ngFor="let items of dataRandomRecipes">
+                  <ion-row>
+                    <ion-col size="12">
+                      <img [src]="items.image" alt="img" class="sli-image">
+                      </ion-col>
+                      <ion-col size="12">
+                        <h3 class="title">{{ items.title }}</h3>
+                      </ion-col>
+                    </ion-row>
+                  </ion-slide>
+                </ion-slides> 
+            </ion-col>
+          </ion-row>
+         </section>
+
+         <section class="sec-recipes">
+          <ion-row>
+            <ion-col size="8">
+              <h4 class="text-one"> All recipies</h4>
+            </ion-col>
+            <ion-col size="4" (click)="goSeeMore()">
+              <h4 class="text-two"> See more</h4>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col size="12">
+              <ion-slides pager="false" [options]="slideOpts">
+                <ion-slide *ngFor="let items of dataAllRecipes">
+                  <ion-row>
+                    <ion-col size="12">
+                      <img [src]="items.image" alt="img" class="sli-image">
+                    </ion-col>
+                    <ion-col size="12">
+                      <h3 class="title">{{ items.title }}</h3>
+                    </ion-col>
+                    </ion-row>
+                  </ion-slide>
+                </ion-slides> 
+            </ion-col>
+          </ion-row>
+         </section>
+
+
+         <section class="sec-menu">
+          <ion-row>
+            <ion-col size="12">
+              <h4 class="text-one"> All Menus</h4>
+            </ion-col>
+            <ion-col size="12">
+              <ion-slides pager="false" [options]="slideOptsOne">
+                <ion-slide *ngFor="let items of objDataMenusItems">
+                  <ion-row [ngStyle]="{'background': items.colorOne}" style="border-radius: 10px;" (click)="goMenuItems(items)">
+                    <ion-col size="12">
+                      <img [src]="items.url" alt="img" class="sli-image">
+                    </ion-col>
+                    <ion-col size="12">
+                      <h3 class="title" [ngStyle]="{'color': items.color}">{{ items.name }}</h3>
+                    </ion-col>
+                    </ion-row>
+                  </ion-slide>
+                </ion-slides> 
+            </ion-col>
+          </ion-row>
+         </section>         
+       </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+
+</ion-content>
