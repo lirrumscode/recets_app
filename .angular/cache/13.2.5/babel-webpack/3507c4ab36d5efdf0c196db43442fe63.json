@@ -1,0 +1,1 @@
+{"ast":null,"code":"export const environment = {\n  production: true,\n  apiKey: \"8bbbfb568bc741a88cb297c1da12ae13\",\n  url: \"https://api.spoonacular.com/\"\n};","map":null,"metadata":{},"sourceType":"module"}

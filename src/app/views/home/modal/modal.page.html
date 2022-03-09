@@ -1,0 +1,26 @@
+<ion-header translucent>
+  <ion-toolbar>
+    <ion-title>Recipe Card 🥘</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="dismissModal()">Close</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content color="light" fullscreen>
+  <div class="ion-padding">
+    <section class="sec-inf">
+      <ion-grid>
+        <ion-row>
+          <ion-col size="12">
+            <p *ngIf="!validateDataCard" class="heading">
+              Doesn't exist a card for this item!
+            </p>
+          </ion-col>
+          <ion-col size="12" *ngIf="validateDataCard">
+            <img *ngIf="dataCard" [src]="dataCard.url" alt="img" />
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </section>
+  </div>
+</ion-content>

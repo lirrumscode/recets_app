@@ -4,7 +4,7 @@
       <ion-slide *ngFor="let items of dataImagesObj">
         <ion-row>
           <ion-col size="12">
-            <img [src]="items.url" alt="img">
+            <img [src]="items.url" alt="img" />
           </ion-col>
         </ion-row>
       </ion-slide>
@@ -16,20 +16,21 @@
       <ion-grid>
         <ion-row>
           <ion-col size="12">
-            <p class="text">Become a </p>
+            <p class="text">Become a</p>
             <h2 class="title">MasterChef 🥘</h2>
-            <p class="text-one">Get recipies from the MasterChef 🥗  all <br>
+            <p class="text-one">
+              Get recipies from the MasterChef 🥗 all <br />
               around the world to fullfill your cravings.
             </p>
           </ion-col>
         </ion-row>
-      </ion-grid>      
+      </ion-grid>
     </div>
   </section>
 
   <section class="sec-btn">
     <div class="circle" [routerLink]="['/home']">
       <ion-icon name="chevron-forward-circle-outline"></ion-icon>
-    </div>  
+    </div>
   </section>
 </ion-content>

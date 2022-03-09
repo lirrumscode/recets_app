@@ -3,7 +3,27 @@
     <ion-grid>
       <ion-row>
         <ion-col size="12">
-          <ion-searchbar placeholder="Search your receipes fav"></ion-searchbar>
+          <h1 class="title">All <span>Recipes</span></h1>
+        </ion-col>
+        <ion-col size="12">
+          <ion-searchbar
+            placeholder="Search your receipes fav"
+            (ionChange)="search($event)"
+            mode="ios"
+          ></ion-searchbar>
+        </ion-col>
+
+        <ion-col size="12">
+          <ion-card
+            *ngFor="let items of dataAllRecipes | search: textSearch;"
+            mode="ios"
+            (click)="goToDetail(items)"
+          >
+            <img [src]="items.image" alt="image" *ngIf="items.image"/>
+            <ion-card-header>
+              <ion-card-subtitle>{{ items.title }}</ion-card-subtitle>
+            </ion-card-header>
+          </ion-card>
         </ion-col>
       </ion-row>
     </ion-grid>

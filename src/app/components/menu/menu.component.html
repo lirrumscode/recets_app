@@ -1,3 +1,56 @@
-<p>
-  menu works!
-</p>
+<ion-menu side="end" menuId="first" contentId="main">
+  <ion-content color="light">
+    <ion-list style="background: none !important">
+      <ion-item
+        class="menu-item"
+        (click)="goAboutMe()"
+        color="light"
+        lines="none"
+        ><ion-icon name="person-outline"></ion-icon
+        ><ion-label>About me</ion-label>
+      </ion-item>
+      <ion-item
+        class="menu-item"
+        (click)="goRandom()"
+        color="light"
+        lines="none"
+        ><ion-icon name="sad-outline"></ion-icon
+        ><ion-label>Random food Joke</ion-label>
+      </ion-item>
+      <ion-item
+        class="menu-item"
+        (click)="goTrivia()"
+        color="light"
+        lines="none"
+        ><ion-icon name="document-text-outline"></ion-icon
+        ><ion-label>Random food Trivia</ion-label>
+      </ion-item>
+      <ion-item
+        class="menu-item"
+        (click)="goVideos()"
+        color="light"
+        lines="none"
+        ><ion-icon name="logo-youtube"></ion-icon
+        ><ion-label>Videos</ion-label>
+      </ion-item>
+    </ion-list>
+    <ion-footer class="ion-no-border" color="light">
+      <p class="title" style="color: #000 !important">
+        Design by: @lirrumscode
+      </p>
+    </ion-footer>
+  </ion-content>
+</ion-menu>
+<ion-router-outlet id="main"></ion-router-outlet>
+<ion-header class="ion-no-border" translucent="true">
+  <ion-toolbar color="light">
+    <ion-row>
+      <ion-col size="3"><ion-menu-button></ion-menu-button></ion-col>
+      <ion-col size="9">
+        <div class="rectangule">
+          <img src="../../../assets/images/user1.png" alt="img" />
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-toolbar>
+</ion-header>

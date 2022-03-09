@@ -1,0 +1,47 @@
+<ion-header class="ion-no-border" mode="ios">
+  <ion-toolbar mode="ios" color="light">
+    <ion-buttons slot="start">
+      <ion-back-button color="dark"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content color="light">
+  <div class="ion-padding">
+    <ion-grid>
+      <ion-row>
+        <ion-col size="12">
+          <h1 class="title">Search <span>Videos</span></h1>
+        </ion-col>
+        <ion-col size="12">
+          <ion-searchbar
+            placeholder="Search your videos fav"
+            (ionChange)="getVideosSearch($event)"
+            mode="ios"
+          ></ion-searchbar>
+        </ion-col>
+
+        <ion-col size="12">
+          <ion-col size="12" *ngIf="msg">
+            <p class="text">{{msg}}</p>
+          </ion-col>
+          <ion-card
+            *ngFor="let items of dataAllVideos | search: textSearch;"
+            mode="ios"
+          >
+            <img [src]="items.thumbnail" alt="image" *ngIf="items.thumbnail" />
+            <ion-card-header>
+              <ion-card-subtitle>
+                <a href="https://youtu.be/{{ items.youTubeId }}"
+                  >{{ items.shortTitle }}</a
+                >
+              </ion-card-subtitle>
+              <ion-card-title>{{ items.title }}</ion-card-title>
+              <p class="text-one">Views: {{ items.views }}</p>
+              <p class="text-one">Rating: {{ items.rating }}</p>
+            </ion-card-header>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-content>

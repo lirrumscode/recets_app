@@ -1,0 +1,123 @@
+/* === VAR ==== */
+$color-primary: #2fd565;
+$fuente: "Poppins";
+$fuentebold: "Poppins";
+
+/* === END VAR === */
+.sec-inf {
+  .title {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    font-family: "Poppins";
+    color: $color-primary;
+  }
+  .notificacion-icon {
+    width: 8%;
+    margin-left: 20px;
+  }
+  .title-card {
+    font-family: "Poppins";
+    font-size: 20px;
+    margin-bottom: 0px !important;
+    font-weight: bold;
+  }
+  .txt-card {
+    text-align: justify;
+    margin-top: 5%;
+    font-family: $fuentebold;
+    padding-left: 0px;
+    padding-right: 0px;
+    //  font-weight: bold;
+  }
+  ion-card {
+    border-radius: 13px;
+    box-shadow: none;
+    margin-top: 0px;
+    ion-card-content {
+      padding-left: 0px;
+      padding-right: 0px;
+    }
+  }
+  .title-card-one {
+    padding-left: 10px;
+    font-weight: bold;
+    color: #000;
+    margin-top: 10px;
+    font-family: "Poppins";
+  }
+  .txt-card-date {
+    padding-left: 10px;
+    font-family: $fuentebold;
+    color: #c3c3c3;
+  }
+  .icon-header {
+    position: absolute;
+    font-size: 20px;
+    color: #c3c3c3;
+    top: 40px;
+    right: 23px;
+  }
+  .heading-four {
+    color: #000;
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .heading-two {
+    font-weight: bold;
+    padding-top: 20px;
+    padding-left: 20px;
+  }
+  .heading-three {
+    padding-left: 20px;
+    color: #000;
+    font-weight: 300;
+  }
+}
+.sec-similar {
+  .text-one {
+    color: #000;
+    font-weight: bold;
+    text-align: left;
+    font-size: 14px;
+  }
+  .text-two {
+    font-weight: 500;
+    color: #ffbfa8;
+    text-align: right;
+    font-size: 13px;
+  }
+  .title {
+    font-size: 11px;
+    color: #000;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    a {
+      text-decoration: none;
+      color: #000;
+    }
+  }
+  .heading-four {
+    color: #000;
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-left: 20px;
+  }
+  .sli-image {
+    border-radius: 10px;
+  }
+}
+/* ==== START MEDIAQUERYS FOR IPAD ==== */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  ion-card {
+    width: 70%;
+    display: block;
+    margin: 0px auto;
+    margin-top: 5%;
+  }
+}
+/* ==== END MEDIAQUERYS FOR IPAD ==== */

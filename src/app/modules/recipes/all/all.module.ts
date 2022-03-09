@@ -7,13 +7,15 @@ import { IonicModule } from '@ionic/angular';
 import { AllPageRoutingModule } from './all-routing.module';
 
 import { AllPage } from './all.page';
+import { PipeModule } from 'src/app/modules/recipes/pipe/pipe.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    AllPageRoutingModule
+    AllPageRoutingModule,
+    PipeModule
   ],
   declarations: [AllPage]
 })

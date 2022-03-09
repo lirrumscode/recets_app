@@ -1,9 +1,87 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>detail</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
+  <div class="ion-padding">
+    <section class="sec-inf">
+      <ion-grid *ngIf="dataDetail">
+        <ion-row>
+          <ion-col size="12">
+            <ion-card-header>
+              <ion-card-subtitle>Detail</ion-card-subtitle>
+              <ion-card-title class="title-card"
+                >{{ dataDetail.title }}</ion-card-title
+              >
+            </ion-card-header>
+            <ion-card>
+              <img [src]="dataDetail.image" style="border-radius: 35px" />
+              <ion-card-content>
+                <ion-row>
+                  <ion-col size="2">
+                    <ion-avatar>
+                      <img
+                        src="https://image.shutterstock.com/image-vector/default-avatar-profile-icon-grey-260nw-518740753.jpg"
+                        alt="img"
+                      />
+                    </ion-avatar>
+                  </ion-col>
+                  <ion-col size="10">
+                    <h3 class="title-card-one">{{ dataDetail.creditsText }}</h3>
+                    <p class="txt-card-date" *ngIf="dataDetail.vegan">
+                      Product Vegan!
+                    </p>
+                    <p class="txt-card-date" *ngIf="!dataDetail.vegan">
+                      Product not Vegan!
+                    </p>
+                  </ion-col>
+                </ion-row>
+                <p class="txt-card" [innerHTML]="dataDetail.instructions"></p>
+                <p class="txt-card" [innerHTML]="dataDetail.summary"></p>
+                <h3 class="heading-four">Ingredients:</h3>
+                <ion-list style="border-radius: 20px">
+                  <ion-item
+                    *ngFor="let items of dataDetail.extendedIngredients"
+                  >
+                    <ion-avatar>
+                      <img
+                        src="https://spoonacular.com/recipeImages/{{items.image}}"
+                        *ngIf="items.image"
+                      />
+                    </ion-avatar>
+                    <ion-label>
+                      <h2 class="heading-two">{{ items.originalName }}</h2>
+                      <p class="heading-three">{{ items.consistency }}</p>
+                    </ion-label>
+                  </ion-item>
+                </ion-list>
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </section>
 
+    <section class="sec-similar">
+      <ion-row>
+        <ion-col size="12">
+          <h3 class="heading-four">Similar Receipes:</h3>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="12">
+          <ion-slides pager="false" [options]="slideOpts">
+            <ion-slide *ngFor="let items of dataSimilar">
+              <ion-row>
+                <ion-col size="12"> </ion-col>
+                <ion-col size="12">
+                  <h3 class="title">
+                    <a href="{{dataSimilar.sourceUrl}}" target="_blank">
+                      {{ items.title }}
+                    </a>
+                  </h3>
+                </ion-col>
+              </ion-row>
+            </ion-slide>
+          </ion-slides>
+        </ion-col>
+      </ion-row>
+    </section>
+  </div>
 </ion-content>

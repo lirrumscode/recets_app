@@ -1,0 +1,15 @@
+{
+    "name": "recetapp.lina",
+    "description": "receipe app",
+    "architecture": "@CLICK_ARCH@",
+    "title": "recetapp",
+    "hooks": {
+        "recetapp": {
+            "apparmor": "recetapp.apparmor",
+            "desktop":  "recetapp.desktop"
+        }
+    },
+    "version": "1.0.0",
+    "maintainer": "linacastro <lirrumscode@gmail.com>",
+    "framework" : "@CLICK_FRAMEWORK@"
+}
